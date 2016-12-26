@@ -1,6 +1,6 @@
 # short_note
 
-> this is a short_note from liuwusong (vue project))
+> this is a little task system from liuwusong (vue project)
 
 ## Build Setup
 
