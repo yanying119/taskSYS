@@ -68,7 +68,7 @@
 	</div>
 </template>
 
-<style>
+<style lang="scss">
 	#content {
 		height: 100%;
 		overflow-y: auto;
@@ -91,18 +91,18 @@
 	}
 	.list-group-item {
 		position: relative;
-	}
-	.list-group-item span {
+		span {
 			line-height: 30px;
-	}
-	.list-group-item label {
-		font-weight: normal;
-	}
-	.list-group-item .remove {
-		position: absolute;
-		right:-5px;
-		top: -4px;
-		line-height: 15px;
+		}
+		label {
+			font-weight: normal;
+		}
+		.remove {
+			position: absolute;
+			right:-5px;
+			top: -4px;
+			line-height: 15px;
+		}
 	}
 	.green {
 		color:#1f8214;
