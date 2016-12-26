@@ -115,7 +115,8 @@
 		width: 50%;
 		z-index: 10;
 		max-height: 300px;
-		overflow-y:auto; 
+		overflow-y:auto;
+		border-radius:4px;
 	}
 	.wrap {
 		position: fixed;
