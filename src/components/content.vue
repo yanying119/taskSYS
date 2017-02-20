@@ -157,7 +157,7 @@
 
 	    		setTimeout(function(){
 	    			_this.dialogPosition()
-	    		},10)
+	    		})
 
 	    	},
 	    	removeTask:function(e,i){
@@ -241,7 +241,7 @@
 	    		this.currentCount = this.taskList.length;
 	    		setTimeout(function(){
 	    			_this.dialogPosition()
-	    		},10)
+	    		})
 	    	},
 	    	closeWindow:function(){
 	    		this.taskItem = false;
