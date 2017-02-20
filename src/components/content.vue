@@ -151,11 +151,26 @@
 	    },
 	    methods:{
 	    	editor:function(i){
+	    		var _this= this;
 	    		this.taskItem = this.taskList[i]
 	    		this.currentCount = i;
 
 	    		setTimeout(function(){
-	    			var dialog = document.getElementById("dialog"),
+	    			_this.dialogPosition()
+	    		},10)
+
+	    	},
+	    	removeTask:function(e,i){
+	    		if(confirm("您真的要删掉吗，删掉就没了")){
+	    			e.stopPropagation();
+	    			this.taskList.splice(i,1);
+	    			this.saveData("taskList",this.taskList);
+	    		}else {
+	    			e.stopPropagation();
+	    		}
+	    	},
+	    	dialogPosition:function(){
+	    		var dialog = document.getElementById("dialog"),
 		    			height = document.documentElement.clientHeight;
 
 		    		var	dialogHeight = dialog.clientHeight,
@@ -168,17 +183,6 @@
 		    				dialog.style.top = 78 +"px";
 		    				console.log(dialog.style.height)
 		    			}
-	    		})
-
-	    	},
-	    	removeTask:function(e,i){
-	    		if(confirm("您真的要删掉吗，删掉就没了")){
-	    			e.stopPropagation();
-	    			this.taskList.splice(i,1);
-	    			this.saveData("taskList",this.taskList);
-	    		}else {
-	    			e.stopPropagation();
-	    		}
 	    	},
 	    	saveTask:function(){
 	    		var dialog = document.getElementById("dialog"),
@@ -232,8 +236,12 @@
 	    		}
 	    	},
 	    	newTask:function(){
+	    		var _this = this;
 	    		this.taskItem = true;
-	    		this.currentCount = this.taskList.length
+	    		this.currentCount = this.taskList.length;
+	    		setTimeout(function(){
+	    			_this.dialogPosition()
+	    		},10)
 	    	},
 	    	closeWindow:function(){
 	    		this.taskItem = false;
@@ -243,9 +251,6 @@
 
 	    			this.taskList = JSON.parse(this.getData("taskList"));
 	    		}
-	    	},
-	    	dialogHeight() {
-
 	    	}
 	    },
 	    mounted:function(){
