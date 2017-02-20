@@ -110,13 +110,16 @@
 	} 
 	#dialog {
 		position: fixed;
-		left: 25%;
-		top: 25%;
-		width: 50%;
+		left: 5%;
+		width: 90%;
 		z-index: 10;
-		max-height: 300px;
+		max-width: 600px;
 		overflow-y:auto;
 		border-radius:4px;
+		background: #fff;
+	}
+	.box {
+		overflow: hidden;
 	}
 	.wrap {
 		position: fixed;
@@ -127,6 +130,9 @@
 		z-index: 9;
 		background: #000;
 		opacity: 0.5;
+	}
+	.task_list {
+		margin-bottom:0;
 	}
 	input,textarea {
 		width: 100%;
@@ -146,7 +152,24 @@
 	    methods:{
 	    	editor:function(i){
 	    		this.taskItem = this.taskList[i]
-	    		this.currentCount = i
+	    		this.currentCount = i;
+
+	    		setTimeout(function(){
+	    			var dialog = document.getElementById("dialog"),
+		    			height = document.documentElement.clientHeight;
+
+		    		var	dialogHeight = dialog.clientHeight,
+		    			top = (height - dialogHeight)/2;
+
+		    			if (top > 0 ){
+		    				dialog.style.top = top +"px";
+		    			}else {
+		    				dialog.style.height = (height - 136)+"px";
+		    				dialog.style.top = 78 +"px";
+		    				console.log(dialog.style.height)
+		    			}
+	    		})
+
 	    	},
 	    	removeTask:function(e,i){
 	    		if(confirm("您真的要删掉吗，删掉就没了")){
@@ -220,10 +243,13 @@
 
 	    			this.taskList = JSON.parse(this.getData("taskList"));
 	    		}
+	    	},
+	    	dialogHeight() {
+
 	    	}
 	    },
 	    mounted:function(){
-	    	this.init()
+	    	this.init();
 	    }
 	}
 </script>
