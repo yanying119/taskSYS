@@ -1,0 +1,137 @@
+.wrapper {
+	position: relative;
+}
+.form {
+	margin:0;
+	padding:0;
+}
+
+body, img {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+/**********************头部内容**********************/
+h1#chingo_logo {
+	background:#FFF url(images/logo.gif) no-repeat left 10px;
+	height:50px;
+	text-indent:-9999px;
+	border-top: 10px solid #036;
+	margin:0;
+	padding:0;
+}
+#chingo_global_nav ul {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	left: 200px;
+	top: 30px;
+	list-style-type:none;
+}
+#chingo_global_nav ul li {
+	float: left;
+	padding: 3px 5px;
+}
+#chingo_global_nav ul li.current {
+	background-color: #3c77b9;
+}
+#chingo_global_nav ul li.current a {
+	color: #fff;
+}
+#chingo_global_nav ul li a {
+	font-size:14px;
+	font-weight:bold;
+}
+/**********导航*************/
+.chingo_nav {
+	width:100%;
+	background:#3c78b5;
+	overflow:hidden;
+	height:30px;
+	margin: 0 auto;
+	margin-bottom:10px;
+}
+.chingo_nav ul {
+	margin-left: 10px;
+	right:0px;
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+.chingo_nav ul li {
+	float:left;
+	padding: 0 10px;
+	margin-right: 10px;
+}
+.chingo_nav ul li a {
+	line-height:30px;
+	color:#FFF;
+	font-size:12px;
+	font-weight:bold;
+}
+.chingo_nav ul li a.hov {
+	background:#003366;
+}
+.chingo_nav form {
+	display:block;
+	position:absolute;
+	right: 10px;
+	top: 4px;
+}
+.chingo_nav form span {
+	color:#fff;
+}
+#chingo_user_nav {
+	position:absolute;
+	right: 10px;
+	bottom: 10px;
+}
+#chingo_user_nav * {
+	font-size: 12px;
+}
+#chingo_user_nav ul, #chingo_user_nav li {
+	margin: 0;
+	padding: 0;
+	list-style-type:none;
+}
+#chingo_user_nav ul li {
+	float:left;
+	padding: 5px;
+}
+/*页脚*/
+#footer {
+	padding:20px 0;
+	overflow:hidden;
+	background:url(images/footerbg.gif) repeat-x;
+	height:55px;
+	text-align:center;
+	font-size:12px;
+}
+
+/* 选项卡*/
+.tabnav {
+	border-bottom: 1px solid #000;
+	list-style-type:none;
+	height: 20px;
+	margin: 0 0 0 20px;
+	padding: 0;
+}
+.tabnav li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	margin-left: 5px;
+}
+.tabnav a {
+	display:block;
+	padding: 4px 5px;
+	background-color: #eee;
+	text-decoration: none;
+	font-size: 12px;
+	color: #000;
+	height: 12px;
+}
+.tabnav a.current {
+	color: #fff;
+	background-color: #999;
+}
