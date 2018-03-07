@@ -95,7 +95,7 @@
 </template>
 <script>
 import vue2datepicker from 'vue2-datepicker';
-import moment from 'moment'
+import moment from 'moment';
 export default {
     data: function () {
         return {
